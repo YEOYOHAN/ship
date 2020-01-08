@@ -16,6 +16,7 @@
             <v-btn text @click="lol()">LOL</v-btn>
             <v-btn text @click="futsal()">FUTSAL</v-btn>
             <v-btn text @click="mypage()">MYPAGE</v-btn>
+            <v-btn text @click="test()">TEST</v-btn>
           </v-toolbar-items>
   
         <!-- <template v-if="$vuetify.breakpoint.smAndUp" >
@@ -123,6 +124,9 @@ export default {
     },
     futsal(){
       this.$router.push({path:'/futsal'})
+    },
+    test(){
+      this.$router.push({path:'/test'})
     },
     sidego(x){
       alert(`${x}`)

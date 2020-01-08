@@ -1,287 +1,370 @@
 <template>
-<div class="center">
-  <div class="card">
-    <div class="additional">
-      <div class="user-card">
-        <div class="level center">
-          FutSal
-        </div>
-        <div class="points center">
-          30,000 Points
-        </div>
-        <!-- 이미지 -->
-        <img width="100px" height="100px" src="http://mblogthumb4.phinf.naver.net/MjAxODA0MTdfMjYx/MDAxNTIzOTIzOTU2MTE0.tKtnqOKqJas0q4h-RdyVZOQA0CfIisbvIdazrbBPB4kg.bO4IRWlDtIiZthVG0NmuyjK2TjkBAKprDUALHuZKv0Mg.PNG.gaogirl/%EC%B6%95%EA%B5%AC%EA%B3%B5.png?type=w800"
-        style="margin-top: 90px;">
+<body>
+  <div class="child">
+    <div class="summoner">
+      <div class="data"><img src="https://ddragon.leagueoflegends.com/cdn/7.8.1/img/profileicon/1439.png"/></div>
+      <div class="data">
+        <p>Gwangjin</p>
+        <div class="level">Level 30</div>
       </div>
-      <div class="more-info">
-        <h1>HITMAP</h1>
-          <img width="300px" height="150px" src="http://tcpschool.com/lectures/img_webbasic_28.png" style="margin-top: 10px;">
-        <div class="stats">
-          <div>
-            <div class="title">전적</div>
-            <i class="fa fa-trophy"></i>
-            <div class="value">5승</div>
-          </div>
-          <div>
-            <div class="title">득점</div>
-            <i class="fa fa-gamepad"></i>
-            <div class="value">3점</div>
-          </div>
-          <div>
-            <div class="title">런닝</div>
-            <i class="fa fa-group"></i>
-            <div class="value">25Km</div>
-          </div>
-          <div>
-            <div class="title">경고</div>
-            <i class="fa fa-coffee"></i>
-            <div class="value infinity">3회</div>
-          </div>
-        </div>
+      <div class="data"></div>
+      <div class="data"><img class="rank" src="https://vignette.wikia.nocookie.net/leagueoflegends/images/8/8a/Season_2019_-_Gold_2.png/revision/latest?cb=20181229234921"/></div>
+      <div class="data">
+        <p>Gold I</p>
+        <div class="stats">Ranked Solo</div>
+        <div class="stats">34W - 22 L | 75LP</div>
+        <div class="stats">Win Ratio: <span>61%</span></div>
       </div>
-    </div>
-    <div class="general">
-      <h1>최근 경기</h1>
-      <p>경기일자 : 2020-01-07</p>
-      <p>경기장 : 부천경기장</p>
-      <p>승,패 : 승리</p>
-      <p>득점 : 1점</p>
-      <p>경고 : 0회</p>
-      <p>런닝 : 4Km</p>
-      <p></p>
-      <p></p>
-      <span class="more">마우스를 올려보세요.</span>
+      <div class="data"><img class="rank" src="https://elofactory.com/sites/default/files/gold_1.png"/></div>
+      <div class="data">
+        <p>Gold V</p>
+        <div class="stats">Ranked Flex</div>
+        <div class="stats">10W - 11 L | 75LP</div>
+        <div class="stats">Win Ratio: <span>48%</span></div>
+      </div>
+      <div class="data"></div>
     </div>
   </div>
+  <div class="child">
 
-  <div class="card green">
-    <div class="additional">
-      <div class="user-card">
-        <div class="level center">
-          League of Legends
-        </div>
-        <div class="points center">
-          30,000 Points
-        </div>
-        <!-- 이미지 -->
-        <img width="100px" height="100px" src="https://i.pinimg.com/originals/b8/3e/6f/b83e6fea403a390bd06ae17c187408e3.png"
-        style="margin-top: 90px;">
+    <div class="container">
+      <div class="champ"> <img src="http://ddragon.leagueoflegends.com/cdn/7.9.1/img/champion/Graves.png"/>
+        <div class="title">Graves</div>
       </div>
-      <div class="more-info">
-        <h1>Ranked</h1>
-        <img width="200px" height="180px" src="https://opgg-static.akamaized.net/images/medals/challenger_1.png?image=q_auto&v=1" style="margin-left: 30px;">
-        <div class="stats">
-          <div>
-            <div class="title">LP</div>
-            <i class="fa fa-trophy"></i>
-            <div class="value">1,169</div>
-          </div>
-          <div>
-            <div class="title">승</div>
-            <i class="fa fa-gamepad"></i>
-            <div class="value">641</div>
-          </div>
-          <div>
-            <div class="title">패</div>
-            <i class="fa fa-group"></i>
-            <div class="value">621</div>
-          </div>
-          <div>
-            <div class="title">승률</div>
-            <i class="fa fa-coffee"></i>
-            <div class="value infinity">51%</div>
-          </div>
+      <div class="summoners">
+        <div class="real"><img class="item" src="http://ddragon.leagueoflegends.com/cdn/7.8.1/img/spell/SummonerFlash.png"/>
+        <img class="item" src="http://ddragon.leagueoflegends.com/cdn/7.8.1/img/spell/SummonerSmite.png"/></div>
+        <div class="keystone"><img class="item key" src="http://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/Predator/Predator.png"/></div>
+      </div>
+      <div class="gameinfo">
+        <div class="match-status">Loss
+          <div class="match-type">Ranked Solo</div>
+        </div>
+        <div class="kda">
+          <div class="score">0 <span>| </span>9 <span>|</span>1</div>
+          <div class="kdatotal">0.80:1 KDA</div>
         </div>
       </div>
-    </div>
-    <div class="general">
-      <h1>Hide on bush</h1>
-      <div>선호하는 포지션
+      <div class="equips">
+        <img class="item" src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/item/1001.png?v=20191212a"/>
+        <img class="item" src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/item/1001.png?v=20191212a"/>
+        <img class="item" src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/item/1001.png?v=20191212a"/>
+        <img class="item" src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/item/1001.png?v=20191212a"/>
+        <img class="item" src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/item/1001.png?v=20191212a"/>
+        <img class="item" src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/item/1001.png?v=20191212a"/></div>
+      <div class="teams">
+        <div class="team">
+          <div class="player"><img class="icon" src="http://ddragon.leagueoflegends.com/cdn/7.9.1/img/champion/Lux.png"/>
+          <span>Fuck League</span></div>
+          <div class="player"><img class="icon" src="http://ddragon.leagueoflegends.com/cdn/7.9.1/img/champion/LeeSin.png"/>
+          <span>Peter Lee</span></div>
+          <div class="player"><img class="icon" src="http://ddragon.leagueoflegends.com/cdn/7.9.1/img/champion/Vayne.png"/>
+          <span>Maniac7</span></div>
+          <div class="player"> <img class="icon" src="http://ddragon.leagueoflegends.com/cdn/7.9.1/img/champion/Ezreal.png"/>
+          <span>Imistakento</span></div>
+          <div class="player"><img class="icon" src="http://ddragon.leagueoflegends.com/cdn/7.9.1/img/champion/Thresh.png"/>
+          <span>Owenbz</span></div>
+        </div>
       </div>
-      <div class="po">
-      <img height="50px" width="50px" src="https://file.namu.moe/file/8ca81569f50919ce8c07b596e4a08b118704bb95be634079b2238663368897220aafdfe4b404a23c45a3dceb079a5463">
-      <img height="50px" width="50px" src="https://w.namu.la/s/d417c241d97480f945f21476e56a337167e41bd0f19b56781ee5b4eb6c8225bccddcb64a308c85311b7937f202a9272834f581d08078cdf1c54d7ac05ba347c167b215ef430195b02b48f01b60c7e21800ea72b24d6bc946599f41078919a80f">
+      <div class="teams">
+        <div class="team">
+          <div class="player"><img class="icon" src="http://ddragon.leagueoflegends.com/cdn/7.9.1/img/champion/Caitlyn.png"/>
+          <span>Tobi Sways</span></div>
+          <div class="player"><img class="icon" src="http://ddragon.leagueoflegends.com/cdn/7.9.1/img/champion/Graves.png"/>
+          <span>orctamer</span></div>
+          <div class="player"><img class="icon" src="http://ddragon.leagueoflegends.com/cdn/7.9.1/img/champion/Fiora.png"/>
+          <span>IPortgasDAce</span></div>
+          <div class="player"> <img class="icon" src="http://ddragon.leagueoflegends.com/cdn/7.9.1/img/champion/AurelionSol.png"/>
+          <span>khs9700</span></div>
+          <div class="player"><img class="icon" src="http://ddragon.leagueoflegends.com/cdn/7.9.1/img/champion/Blitzcrank.png"/>
+          <span>Oct 18</span></div>
+        </div>
       </div>
-      <div>최근 7일간 랭크 승률</div>
-      
-      <span class="more">마우스를 올려보세요.</span>
     </div>
   </div>
-</div>
-
+</body>
 </template>
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Abel');
-
-html, body {
-  background: #FCEEB5;
-  font-family: Abel, Arial, Verdana, sans-serif;
+body {
+  font-family: "Open Sans";
+  background-color: #030404;
 }
 
-.center {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-}
-
-.card {
-  width: 500px;
-  height: 300px;
-  background-color: #fff;
-  background: linear-gradient(#f8f8f8, #fff);
-  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-  margin: 1.5rem;
-}
-
-.card h1 {
-  text-align: center;
-}
-
-.card .additional {
-  position: absolute;
-  width: 150px;
-  height: 100%;
-  background: linear-gradient(#dE685E, #EE786E);
-  transition: width 0.4s;
-  overflow: hidden;
-  z-index: 2;
-}
-
-.card.green .additional {
-  background: linear-gradient(#92bCa6, #A2CCB6);
-}
-
-
-.card:hover .additional {
-  width: 100%;
-  border-radius: 0 5px 5px 0;
-}
-
-.card .additional .user-card {
-  width: 150px;
-  height: 100%;
-  position: relative;
-  float: left;
-}
-
-.card .additional .user-card::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 10%;
-  right: -2px;
-  height: 80%;
-  border-left: 2px solid rgba(0,0,0,0.025);
-}
-
-.card .additional .user-card .level,
-.card .additional .user-card .points {
-  top: 15%;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  font-weight: bold;
-  background: rgba(0,0,0,0.15);
-  padding: 0.125rem 0.75rem;
-  border-radius: 100px;
-  white-space: nowrap;
-}
-
-.card .additional .user-card .points {
-  top: 85%;
-}
-.card .additional .more-info {
-  width: 300px;
-  float: left;
-  position: absolute;
-  left: 150px;
-  height: 100%;
-  font-size: 30px;
-}
-
-.card .additional .more-info h1 {
-  color: #fff;
-  margin-bottom: 0;
-}
-
-.card.green .additional .more-info h1 {
-  color: #224C36;
-}
-
-.card .additional .coords {
-  margin: 0 1rem;
-  color: #fff;
-  font-size: 1rem;
-}
-
-.card.green .additional .coords {
-  color: #325C46;
-}
-
-.card .additional .coords span + span {
-  float: right;
-}
-
-.card .additional .stats {
-  font-size: 2rem;
+.container {
   display: flex;
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
-  top: auto;
-  color: #fff;
+  flex-direction: row;
+  align-items: center;
 }
 
-.card.green .additional .stats {
-  color: #325C46;
+.win {
+  color: #90C048;
 }
 
-.card .additional .stats > div {
-  flex: 1;
+.match-status {
+  width: 50%;
   text-align: center;
 }
 
-.card .additional .stats i {
+.container .summoners {
+  display: flex;
+}
+
+.summoners .real {
+  width: 50%;
+  text-align: right;
+}
+
+.summoners .keystone {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.container .gameinfo {
+  display: flex;
+  font-weight: 200;
+  font-size: 38px;
+  color: #ED4337;
+}
+
+.match-type {
+  font-size: 14px;
+  color: #777;
+}
+
+.games {
+  max-width: 1600px;
+  margin: auto;
+}
+
+.title {
+  position: relative;
+  font-size: 12px;
+  top: -24px;
+  width: 115px;
+  padding: 6px 2px;
+  margin: auto;
+  text-shadow: 0px 1px 1px #000;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: bold;
+}
+
+.champ img {
+  margin: auto;
   display: block;
 }
 
-.card .additional .stats div.title {
-  font-size: 0.75rem;
-  font-weight: bold;
+.score {
+  display: flex;
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+  justify-content: center;
+}
+.score span {
+  color: #666;
+}
+
+.kda {
+  width: 50%;
+}
+
+.kdatotal {
+  font-size: 14px;
+  margin: 13px 0 0 0;
+  flex-direction: column;
+  color: #777;
+  text-align: center;
+}
+
+.equips {
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+  border-radius: 6px;
+  margin: 0 5px 10px 5px;
+  width: auto;
+  height: 55px;
+}
+
+.key {
+  height: 45px;
+  width: auto;
+}
+
+.child {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: #131616;
+  border-top: 1px solid #242424;
+  border-bottom: 1px solid #242424;
+}
+
+.teams {
+  flex-grow: 1;
+}
+
+.team {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  flex-direction: row;
+  height: 180px;
+  margin: 10px 0;
+  padding-left: 15%;
+  flex-direction: row;
+}
+
+.player {
+  text-align: left;
+  display: flex;
+  item-align: center;
+  padding: 5px;
+}
+
+.player span {
+  margin-left: 10px;
+  padding-top: 2px;
+  color: #777;
+}
+
+.icon {
+  display: flex;
+  width: 25px;
+  height: 25px;
+}
+
+.champion {
+  display: flex;
+}
+
+.info {
+  background-color: #222;
+  display: flex;
+  font-size: 16px;
+  width: 100%;
+  color: #999;
   text-transform: uppercase;
+  flex-direction: row;
+  text-align: center;
 }
 
-.card .additional .stats div.value {
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1.5rem;
+.champ {
+  width: 15%;
 }
 
-.card .additional .stats div.value.infinity {
-  font-size: 1.5rem;
+.summoners {
+  width: 15%;
 }
 
-.card .general {
-  width: 300px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  box-sizing: border-box;
-  padding: 1rem;
-  padding-top: 0;
+.gameinfo {
+  width: 20%;
 }
 
-.card .general .more {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  font-size: 0.9em;
+.equips {
+  width: 20%;
 }
+
+.teams {
+  width: 20%;
+}
+
+.summoner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.summoner p {
+  display: flex;
+  margin: 0 10px;
+  font-size: 32px;
+  color: #ddd;
+  text-align: center;
+}
+
+.level {
+  font-size: 18px;
+  text-align: center;
+  margin: 0 10px;
+  color: #777;
+}
+
+.stats {
+  font-size: 14px;
+  text-align: left;
+  margin: 0 10px;
+  color: #777;
+}
+
+.stats span {
+  color: #90C048;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+}
+
+.rank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.data:nth-child(3) {
+  flex-grow: 1;
+}
+
+.data:last-child {
+  flex-grow: 1;
+}
+
+.logo {
+  text-align: center;
+  font-size: 3em;
+  color: #777;
+}
+
+.fa-cube {
+  color: black;
+  margin-top: 30%;
+}
+
+.fa-circle {
+  color: #777;
+  margin-top: 30%;
+}
+
+.logo h4 {
+  font-size: 0.8em;
+}
+
+.footer {
+  background: #111;
+  color: #777;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 30px;
+}
+
+.footer p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.fa-cube:before {
+  margin-left: 6px;
+}
+
 </style>

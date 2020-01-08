@@ -5,8 +5,56 @@
     <v-toolbar flat>
       <v-toolbar-title class="title">MY Page</v-toolbar-title>
       <v-spacer></v-spacer>
-    </v-toolbar>
-  </v-card>
+      <v-dialog v-model="dialog" persistent max-width="600px">
+      <template v-slot:activator="{ on }">
+        <v-btn color="primary" dark v-on="on">회원정보수정</v-btn>
+      </template>
+      <v-card>
+        <v-card-title>
+          <span class="headline">회원정보</span>
+        </v-card-title>
+        <v-card-text>
+          <v-container>
+            <v-row>
+              <v-col cols="12" sm="6" md="4">
+                <v-text-field label="아이디" hint="변경불가" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6" md="4">
+                <v-text-field label="이름" required></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field label="Email*" required></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field :rules="rules" counter="25" label="Password*" type="password" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <v-select
+                  :items="['0-17', '18-29', '30-54', '54+']"
+                  label="Age*"
+                  required>
+                </v-select>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <v-autocomplete
+                  :items="['여자', '남자']"
+                  label="성별"
+                  multiple>
+                </v-autocomplete>
+              </v-col>
+            </v-row>
+          </v-container>
+          <small>수정 완료후 저장버튼을 눌러주세요.</small>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="blue darken-1" text @click="dialog = false">닫기</v-btn>
+          <v-btn color="blue darken-1" text @click="dialog = false">저장</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+  </v-toolbar>
+</v-card>
 <div class="center">
   <div class="card">
     <div class="additional">
@@ -110,7 +158,10 @@
       <img height="50px" width="50px" src="https://w.namu.la/s/d417c241d97480f945f21476e56a337167e41bd0f19b56781ee5b4eb6c8225bccddcb64a308c85311b7937f202a9272834f581d08078cdf1c54d7ac05ba347c167b215ef430195b02b48f01b60c7e21800ea72b24d6bc946599f41078919a80f">
       </div>
       <div>최근 7일간 랭크 승률</div>
-
+      <div class="chart">
+        83%
+        <span></span>
+      </div>
       <span class="more">마우스를 올려보세요.</span>
     </div>
   </div>
@@ -120,11 +171,23 @@
         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+        <li><a href="#"><i class="fa fa-comment-o"></i></a></li>
     </ul>
 </div>
 </v-app>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      dialog : false,
+      rules: [v => v.length <= 25 || 'Max 25 characters']
+    }
+  }
+}
+
+</script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Abel');
 html, body {
@@ -134,7 +197,7 @@ html, body {
 
 .center {
   position: absolute;
-  top: 45%;
+  top: 47%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
 }
@@ -344,5 +407,41 @@ html, body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 265ms ease-in;
+}
+.chart {
+  margin: 22px auto;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  background: white;
+  font: bold 35px/100px Sans-Serif;
+  text-align: center;
+  line-height: 80px;
+  color: #54a2dd;
+}
+.chart:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  bottom: -20px;
+  right: -20px;
+  border-radius: 50%;
+  background: #54a2dd;
+  z-index: -2;
+}
+.chart span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 80px solid white;
+  z-index: -1;
+  top: -25px;
+  left: 0px;
+  transform-origin: 50px 80px;
+  transform: rotate(285deg);
 }
 </style>

@@ -22,6 +22,7 @@ import StudentFindSome from  '@/components/admin/StudentFindSome.vue'
 import StudentFindId from  '@/components/admin/StudentFindId.vue'
 import FutsalHome from '@/components/futsal/FutsalHome.vue'
 import FutsalMatch from '@/components/futsal/MatchPage.vue'
+import test from '@/components/test.vue'
 
 Vue.use(Router)
 export default new Router({
@@ -48,7 +49,8 @@ export default new Router({
           {path:'/lol', name:'lol', component: Lol},
           {path:'/remove', name:'remove', component:  Remove},
           {path: '/futsalhome', name: 'futsalhome', component: FutsalHome},
-		{path: '/futsalhome/match', name: 'futsalmatch', component: FutsalMatch}
+          {path: '/futsalhome/match', name: 'futsalmatch', component: FutsalMatch},
+          {path: '/test', name: 'test', component: test}
           
      ]    
 })
