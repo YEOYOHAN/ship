@@ -1,7 +1,6 @@
 <template>
-<v-app id="inspire">
+<div>
   <v-card>
-    <v-system-bar></v-system-bar>
     <v-toolbar flat>
       <v-toolbar-title class="title">MY Page</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -174,9 +173,8 @@
         <li><a href="#"><i class="fa fa-comment-o"></i></a></li>
     </ul>
 </div>
-</v-app>
+</div>
 </template>
-
 <script>
 export default {
   data() {
@@ -186,7 +184,6 @@ export default {
     }
   }
 }
-
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Abel');
@@ -194,57 +191,48 @@ html, body {
   background: #FCEEB5;
   font-family: Abel, Arial, Verdana, sans-serif;
 }
-
 .center {
   position: absolute;
   top: 47%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
 }
-
 .card {
   width: 500px;
   height: 300px;
   background-color: #fff;
-  background: linear-gradient(#f8f8f8, #fff);
+  background: linear-gradient(#F8F8F8, #fff);
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
   border-radius: 6px;
   overflow: hidden;
   position: relative;
   margin: 1.5rem;
 }
-
 .card h1 {
   text-align: center;
 }
-
 .card .additional {
   position: absolute;
   width: 150px;
   height: 100%;
-  background: linear-gradient(#dE685E, #EE786E);
+  background: linear-gradient(#DE685E, #EE786E);
   transition: width 0.4s;
   overflow: hidden;
   z-index: 2;
 }
-
 .card.green .additional {
-  background: linear-gradient(#92bCa6, #A2CCB6);
+  background: linear-gradient(#92BCA6, #A2CCB6);
 }
-
-
 .card:hover .additional {
   width: 100%;
   border-radius: 0 5px 5px 0;
 }
-
 .card .additional .user-card {
   width: 150px;
   height: 100%;
   position: relative;
   float: left;
 }
-
 .card .additional .user-card::after {
   content: "";
   display: block;
@@ -254,7 +242,6 @@ html, body {
   height: 80%;
   border-left: 2px solid rgba(0,0,0,0.025);
 }
-
 .card .additional .user-card .level,
 .card .additional .user-card .points {
   top: 15%;
@@ -267,7 +254,6 @@ html, body {
   border-radius: 100px;
   white-space: nowrap;
 }
-
 .card .additional .user-card .points {
   top: 85%;
 }
@@ -279,30 +265,24 @@ html, body {
   height: 100%;
   font-size: 30px;
 }
-
 .card .additional .more-info h1 {
   color: #fff;
   margin-bottom: 0;
 }
-
 .card.green .additional .more-info h1 {
   color: #224C36;
 }
-
 .card .additional .coords {
   margin: 0 1rem;
   color: #fff;
   font-size: 1rem;
 }
-
 .card.green .additional .coords {
   color: #325C46;
 }
-
 .card .additional .coords span + span {
   float: right;
 }
-
 .card .additional .stats {
   font-size: 2rem;
   display: flex;
@@ -313,36 +293,29 @@ html, body {
   top: auto;
   color: #fff;
 }
-
 .card.green .additional .stats {
   color: #325C46;
 }
-
 .card .additional .stats > div {
   flex: 1;
   text-align: center;
 }
-
 .card .additional .stats i {
   display: block;
 }
-
 .card .additional .stats div.title {
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
 }
-
 .card .additional .stats div.value {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.5rem;
 }
-
 .card .additional .stats div.value.infinity {
   font-size: 1.4rem;
 }
-
 .card .general {
   width: 300px;
   height: 100%;
@@ -391,7 +364,7 @@ html, body {
   height: 60px;
   border-radius: 100%;
   display: block;
-  background: linear-gradient(45deg, #ff003c, #c648c8);
+  background: linear-gradient(45deg, #FF003C, #C648C8);
   transition: all 265ms ease-out;
 }
 .social-icons a:hover:before {
@@ -402,8 +375,8 @@ html, body {
   transform: scale(2.2);
   -ms-transform: scale(2.2);
   -webkit-transform: scale(2.2);
-  color: #ff003c;
-  background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
+  color: #FF003C;
+  background: -webkit-linear-gradient(45deg, #FF003C, #C648C8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 265ms ease-in;
@@ -418,7 +391,7 @@ html, body {
   font: bold 35px/100px Sans-Serif;
   text-align: center;
   line-height: 80px;
-  color: #54a2dd;
+  color: #54A2DD;
 }
 .chart:before {
   content: "";
@@ -428,7 +401,7 @@ html, body {
   bottom: -20px;
   right: -20px;
   border-radius: 50%;
-  background: #54a2dd;
+  background: #54A2DD;
   z-index: -2;
 }
 .chart span {

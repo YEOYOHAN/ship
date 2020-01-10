@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <KakaoLogin
-      api-key="<api-key>"
+      api-key="e53598bde4998b0cf095d0c8d3ea2f52"
       image="kakao_login_btn_small"
       :on-success=onSuccess
       :on-failure=onFailure

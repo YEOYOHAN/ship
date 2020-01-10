@@ -2,12 +2,15 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import PreSidebar from '@/components/cmm/PreSidebar.vue'
 import AdminSidebar from  '@/components/cmm/AdminSidebar.vue'
+import Test from  '@/components/cmm/Test.vue'
 import StudentSidebar from  '@/components/cmm/StudentSidebar.vue'
-import Layout from '@/components/cmm/Layout.vue'
+import Carousel from  '@/components/cmm/Carousel.vue'
 import Join from '@/components/auth/Join.vue'
 import Login from '@/components/auth/Login.vue'
-import Admin from '@/components/admin/Admin.vue'
 import MyPage from '@/components/auth/MyPage.vue'
+import Admin from '@/components/admin/Admin.vue'
+import Register from '@/components/admin/Register.vue'
+import MemberManage from '@/components/admin/MemberManage.vue'
 import FutsalMypage from  '@/components/member/FutsalMypage.vue'
 import StudentList from  '@/components/member/StudentList.vue'
 import MyPageUpdate from  '@/components/member/MyPageUpdate.vue'
@@ -22,13 +25,15 @@ import StudentFindSome from  '@/components/admin/StudentFindSome.vue'
 import StudentFindId from  '@/components/admin/StudentFindId.vue'
 import FutsalHome from '@/components/futsal/FutsalHome.vue'
 import FutsalMatch from '@/components/futsal/MatchPage.vue'
-import test from '@/components/test.vue'
+import CreateRoom from '@/components/lol/CreateRoom.vue'
+import JoinRank from '@/components/lol/JoinRank.vue'
+import JoinKal from '@/components/lol/JoinKal.vue'
+import Kalbaram from '@/components/lol/Kalbaram.vue'
 
 Vue.use(Router)
 export default new Router({
      mode: 'history',
      routes: [
-          {path:'/layout', name:'layout', component:  Layout},
           {path:'/presidebar', name:'presidebar',  component: PreSidebar},
           {path:'/adminsidebar', name:'adminsidebar',  component: AdminSidebar},
           {path:'/studentsidebar', name:'studentsidebar',  component: StudentSidebar},
@@ -50,7 +55,14 @@ export default new Router({
           {path:'/remove', name:'remove', component:  Remove},
           {path: '/futsalhome', name: 'futsalhome', component: FutsalHome},
           {path: '/futsalhome/match', name: 'futsalmatch', component: FutsalMatch},
-          {path: '/test', name: 'test', component: test}
+          {path: '/createroom', name: 'createroom', component: CreateRoom},
+          {path: '/register', name: 'register', component: Register},
+          {path: '/test', name: 'test', component: Test},
+          {path: '/joinrank', name: 'joinrank', component: JoinRank},
+          {path: '/joinkal', name: 'joinkal', component: JoinKal},
+          {path: '/kalbaram', name: 'kalbaram', component: Kalbaram},
+          {path: '/membermanage', name: 'membermanage', component: MemberManage},
+          {path: '/', name: 'carousel', component: Carousel}
           
      ]    
 })

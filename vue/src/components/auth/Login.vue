@@ -1,59 +1,26 @@
 <template>
 <div id="app">
-  <v-app id="inspire">
-    <v-content>
-      <v-container fluid>
-        <v-layout justify-center>
-          <v-flex md5>
-            <v-card class="elevation-12">
-              <v-toolbar color="primary" dark flat>
-                <v-toolbar-title>Login form</v-toolbar-title>
-                <v-spacer></v-spacer>
-                <v-tooltip bottom>
-                </v-tooltip>
-                <v-tooltip right>
-                  <template v-slot:activator="{ on }">
-                    <v-btn
-                      icon
-                      large
-                      href="https://codepen.io/johnjleider/pen/pMvGQO"
-                      target="_blank"
-                      v-on="on"
-                    >
-                      <v-icon>mdi-codepen</v-icon>
-                    </v-btn>
-                  </template>
-                  <span>Codepen</span>
-                </v-tooltip>
-              </v-toolbar>
-              <v-card-text>
-                <v-form>
-                  <v-text-field
-                    label="ID"
-                    name="id"
-                    prepend-icon=""
-                    type="text"
-                  ></v-text-field>
+  <v-btn color="indigo darken-1" dark fixed center @click="dialog = !dialog"  style="font-size:15px" > login </v-btn>
+    <v-dialog v-model="dialog" width="400px" >
+      <v-card >
+        <v-card-title class="indigo " font-color="white" > LOGIN </v-card-title>
+        <v-container fluid  >
+          <v-layout wrap  >
+            <v-flex xs8  >
+              <v-text-field center prepend-icon="people" v-model="userid" label="ID" required></v-text-field>
+              <v-text-field prepend-icon="lock" label="PASSWORD" type="password" v-model="passwd"></v-text-field>
+            </v-flex>
+            
+          </v-layout>
+        </v-container>
 
-                  <v-text-field
-                    id="password"
-                    label="PASSWORD"
-                    name="password"
-                    prepend-icon=""
-                    type="password"
-                  ></v-text-field>
-                </v-form>
-              </v-card-text>
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="primary">Login</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-content>
-  </v-app>
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn text color="primary" @click="login()">LOGIN</v-btn>
+        <v-btn text color="red" @click="dialog = false">CANCEL</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
 </div>
 
 </template>
@@ -61,8 +28,11 @@
 import axios from 'axios'
 import {store} from '../../store'
 export default {
+  components:{
+  },
    data(){
       return {
+        rating:3,
         context : 'http://localhost:8080',
         result : '',
         userid : '',
@@ -94,12 +64,13 @@ export default {
             if(res.data.result === "SUCCESS"){
                 store.state.person = res.data.person
                 if(this.state.person.role != 'student'){
-                    // this.state.authCheck = true
+                    this.state.authCheck = true
                     this.$router.push({path:'/'})
                 }else{
                     this.state.authCheck = false
                 }
-                this.$router.push({path:'/mypage'})
+                this.dialog=false
+                this.$router.push({path:'/'})
             }else{
                 alert(`로그인 실패`)
                 this.$router.go({path: '/login'})
@@ -114,4 +85,10 @@ export default {
 }
 </script>
 <style scoped>
+.layout {
+  justify-content:center;
+}
+.theme--light.v-card{
+  color:white;
+}
 </style>
